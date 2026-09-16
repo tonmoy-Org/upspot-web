@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block bg-white px-4 py-3 rounded-2xl shadow-lg">
               <Image 
-                src="/logo.png" 
+                src="/logo-v2.png" 
                 alt="UpSpot Logo" 
                 width={400} 
                 height={100} 
