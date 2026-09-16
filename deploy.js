@@ -37,19 +37,21 @@ async function deploy() {
     // 4. Start PM2
     console.log('Starting application with PM2...');
     await ssh.execCommand('pm2 delete upspot || true'); // delete old instance if exists
-    await ssh.execCommand('pm2 start npm --name "upspot" -- run start', { cwd: '/var/www/upspot' });
+    await ssh.execCommand('PORT=3001 pm2 start npm --name "upspot" -- run start', { cwd: '/var/www/upspot' });
     await ssh.execCommand('pm2 save');
     await ssh.execCommand('pm2 startup systemd -u root --hp /root || true');
 
     // 5. Configure Nginx
     console.log('Configuring Nginx...');
-    const nginxConfig = `
+    const checkNginx = await ssh.execCommand('test -f /etc/nginx/sites-available/upspot && echo "exists" || echo "not_exists"');
+    if (checkNginx.stdout.trim() === 'not_exists') {
+        const nginxConfig = `
 server {
     listen 80;
     server_name upspotlimited.com www.upspotlimited.com;
     
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://localhost:3001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -58,12 +60,15 @@ server {
     }
 }
 `;
-    await ssh.execCommand(`cat > /etc/nginx/sites-available/upspot << 'EOF'\n${nginxConfig}\nEOF`);
-    await ssh.execCommand('ln -sf /etc/nginx/sites-available/upspot /etc/nginx/sites-enabled/');
-    await ssh.execCommand('rm -f /etc/nginx/sites-enabled/default');
-    const nginxTest = await ssh.execCommand('nginx -t');
-    console.log('Nginx test:', nginxTest.stderr);
-    await ssh.execCommand('systemctl restart nginx');
+        await ssh.execCommand(`cat > /etc/nginx/sites-available/upspot << 'EOF'\n${nginxConfig}\nEOF`);
+        await ssh.execCommand('ln -sf /etc/nginx/sites-available/upspot /etc/nginx/sites-enabled/');
+        await ssh.execCommand('rm -f /etc/nginx/sites-enabled/default');
+        const nginxTest = await ssh.execCommand('nginx -t');
+        console.log('Nginx test:', nginxTest.stderr);
+        await ssh.execCommand('systemctl restart nginx');
+    } else {
+        console.log('Nginx config already exists. Skipping overwrite to preserve SSL.');
+    }
 
     // 6. Setup SSL
     console.log('Generating SSL certificate...');
