@@ -30,7 +30,7 @@ async function deploy() {
     await ssh.execCommand('tar -xzf /var/www/upspot.tar.gz -C /var/www/upspot');
     
     // Check if package.json has dependencies and build the project
-    const buildResult = await ssh.execCommand('npm install && npm run build', { cwd: '/var/www/upspot' });
+    const buildResult = await ssh.execCommand('rm -rf .next && npm install && npm run build', { cwd: '/var/www/upspot' });
     console.log(buildResult.stdout);
     if (buildResult.stderr) console.error(buildResult.stderr);
 

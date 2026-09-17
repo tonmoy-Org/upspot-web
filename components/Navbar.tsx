@@ -34,9 +34,9 @@ export default function Navbar() {
         </div>
         
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/contact" className="inline-flex h-10 items-center justify-center rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 px-6 text-sm font-bold text-white shadow-lg shadow-emerald-500/25 transition-all">
+          <a href="https://calendly.com/info-tonmoyorg/upspot-limited" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center justify-center rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 px-6 text-sm font-bold text-white shadow-lg shadow-emerald-500/25 transition-all">
             Schedule a Call
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Toggle Button */}
@@ -57,9 +57,9 @@ export default function Navbar() {
           <Link href="/services" onClick={() => setIsOpen(false)} className="text-base font-medium text-neutral-600 hover:text-emerald-600 transition-colors py-3 border-b border-neutral-100">Services</Link>
           <Link href="/contact" onClick={() => setIsOpen(false)} className="text-base font-medium text-neutral-600 hover:text-emerald-600 transition-colors py-3 border-b border-neutral-100">Contact</Link>
           <div className="pt-4 pb-2">
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="inline-flex h-12 w-full items-center justify-center rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 px-6 text-base font-bold text-white shadow-lg shadow-emerald-500/25 transition-all">
+            <a href="https://calendly.com/info-tonmoyorg/upspot-limited" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="inline-flex h-12 w-full items-center justify-center rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 px-6 text-base font-bold text-white shadow-lg shadow-emerald-500/25 transition-all">
               Schedule a Call
-            </Link>
+            </a>
           </div>
         </div>
       )}

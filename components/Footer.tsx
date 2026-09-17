@@ -30,7 +30,8 @@ export default function Footer() {
               <li><Link href="/" className="text-sm text-emerald-100/70 hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/about" className="text-sm text-emerald-100/70 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/services" className="text-sm text-emerald-100/70 hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link href="/contact" className="text-sm text-emerald-100/70 hover:text-white transition-colors">Contact & Booking</Link></li>
+              <li><Link href="/contact" className="text-sm text-emerald-100/70 hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="https://calendly.com/info-tonmoyorg/upspot-limited" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-300 font-medium hover:text-white transition-colors">Book a Call (Calendly)</a></li>
             </ul>
           </div>
 

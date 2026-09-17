@@ -36,9 +36,9 @@ export default function ContactPage() {
                 </div>
                 
                 {/* Calendly Inline Widget */}
-                <div className="w-full h-[600px] border border-neutral-200 rounded-2xl overflow-hidden shadow-lg bg-white">
+                <div className="w-full h-[1000px] min-h-[900px] border border-neutral-200 rounded-2xl overflow-hidden shadow-lg bg-white">
                   <iframe 
-                    src="https://calendly.com/upspotlimited?hide_gdpr_banner=1" 
+                    src="https://calendly.com/info-tonmoyorg/upspot-limited?hide_gdpr_banner=1" 
                     width="100%" 
                     height="100%" 
                     frameBorder="0" 
@@ -105,7 +105,7 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <label className="text-sm font-medium text-neutral-700">Full Name</label>
                         <input type="text" className="w-full h-12 px-4 rounded-xl border border-neutral-300 bg-white text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500" placeholder="John Doe" />
-                      </div>
+                      </div> 
                       <div className="space-y-2">
                         <label className="text-sm font-medium text-neutral-700">Business Email</label>
                         <input type="email" className="w-full h-12 px-4 rounded-xl border border-neutral-300 bg-white text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500" placeholder="john@company.com" />
@@ -120,10 +120,10 @@ export default function ContactPage() {
                         <label className="text-sm font-medium text-neutral-700">Monthly Ad Spend</label>
                         <select defaultValue="" className="w-full h-12 px-4 rounded-xl border border-neutral-300 bg-white text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500">
                           <option value="" disabled>Select an option</option>
-                          <option value="< ৳100k">Under ৳100,000</option>
-                          <option value="৳100k - ৳500k">৳100,000 - ৳500,000</option>
-                          <option value="৳500k - ৳1M">৳500,000 - ৳1,000,000</option>
-                          <option value="৳1M+">Over ৳1,000,000</option>
+                          <option value="< $1,000">Under $1,000</option>
+                          <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                          <option value="$5,000 - $20,000">$5,000 - $20,000</option>
+                          <option value="$20,000+">Over $20,000</option>
                         </select>
                       </div>
                     </div>
