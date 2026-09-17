@@ -1,7 +1,8 @@
-import { CheckCircle2, TrendingUp, Users, Target } from "lucide-react";
+import { CheckCircle2, TrendingUp, Users, Target, ShieldCheck, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import founderImg from "@/public/founder.png";
 
 export default function AboutPage() {
   return (
@@ -27,19 +28,20 @@ export default function AboutPage() {
         <section className="w-full py-24 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <FadeIn delay={0.3}>
-              <div className="flex flex-col lg:flex-row items-center gap-16">
-                <div className="lg:w-2/5 flex justify-center">
-                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-50 bg-neutral-100">
+              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <div className="lg:w-1/2 flex justify-center">
+                  <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[440px] lg:h-[440px] rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-50 bg-neutral-100">
                     <Image 
-                      src="/founder.png" 
+                      src={founderImg} 
                       alt="Shameem Ahmmed" 
                       fill 
-                      className="object-cover"
-                      sizes="(max-width: 768px) 256px, 320px"
+                      priority
+                      className="object-cover object-center scale-120 transition-transform duration-500 hover:scale-125"
+                      sizes="(max-width: 768px) 384px, 440px"
                     />
                   </div>
                 </div>
-                <div className="lg:w-3/5 space-y-8">
+                <div className="lg:w-1/2 space-y-8">
                   <div className="space-y-6">
                     <div className="inline-flex items-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-bold text-emerald-700">
                       Leadership
@@ -54,7 +56,54 @@ export default function AboutPage() {
                       With extensive experience in digital performance marketing, growth scaling, and business strategy, Shameem built UpSpot to bridge the gap between creative execution and data-driven profitability. He actively oversees the strategic direction of our client accounts, ensuring consistent, high-ROI outcomes.
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-neutral-100">
+
+                  {/* Verification Credentials Card */}
+                  <div className="p-6 bg-gradient-to-br from-emerald-50/80 to-teal-50/80 rounded-2xl border border-emerald-200 shadow-sm space-y-4">
+                    <div className="flex items-center gap-2 text-emerald-900 font-bold text-base">
+                      <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                      <span>Verified Founder & Business Entity Details</span>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-neutral-500 block text-xs font-semibold uppercase tracking-wider">Founder Name</span>
+                        <span className="font-bold text-neutral-900">Shameem Ahmmed</span>
+                      </div>
+                      <div>
+                        <span className="text-neutral-500 block text-xs font-semibold uppercase tracking-wider">Company Name</span>
+                        <span className="font-bold text-neutral-900">UpSpot Limited</span>
+                      </div>
+                      <div>
+                        <span className="text-neutral-500 block text-xs font-semibold uppercase tracking-wider">Email Address</span>
+                        <a href="mailto:upspotlimited@gmail.com" className="font-medium text-emerald-700 hover:underline">
+                          upspotlimited@gmail.com
+                        </a>
+                      </div>
+                      <div>
+                        <span className="text-neutral-500 block text-xs font-semibold uppercase tracking-wider">Phone / WhatsApp</span>
+                        <a href="tel:+8801673142097" className="font-medium text-emerald-700 hover:underline">
+                          +880 1673142097
+                        </a>
+                      </div>
+                      <div className="sm:col-span-2">
+                        <span className="text-neutral-500 block text-xs font-semibold uppercase tracking-wider">Marketplace Profile</span>
+                        <a 
+                          href="https://www.fiverr.com/users/shameemahmmed" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center gap-1.5 font-bold text-emerald-700 hover:text-emerald-900 underline mt-0.5"
+                        >
+                          <span>https://www.fiverr.com/users/shameemahmmed</span>
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </div>
+                      <div className="sm:col-span-2 pt-3 border-t border-emerald-200/60 text-xs text-neutral-700">
+                        <span className="font-bold text-neutral-900">Primary Registered Address:</span> Plot# 87, BNS Center, Sector-07, Uttara, Dhaka - 1230, Bangladesh
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                     <div className="p-6 bg-neutral-50 rounded-2xl border border-neutral-200 shadow-sm">
                       <CheckCircle2 className="w-6 h-6 mb-4 text-emerald-500" />
                       <h4 className="font-bold mb-2 text-neutral-900 text-lg">Strict Accountability</h4>

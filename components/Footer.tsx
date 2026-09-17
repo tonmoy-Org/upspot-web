@@ -47,8 +47,11 @@ export default function Footer() {
 
           {/* Section 4 */}
           <div className="space-y-6">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
-            <ul className="space-y-4">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact & Verification</h4>
+            <ul className="space-y-3">
+              <li className="text-sm text-emerald-100/90 font-medium">
+                Founder: <span className="text-white font-bold">Shameem Ahmmed</span>
+              </li>
               <li>
                 <a href="tel:+8801673142097" className="text-sm hover:text-white transition-colors font-medium text-emerald-400">
                   Phone: +880 1673142097
@@ -59,13 +62,19 @@ export default function Footer() {
                   Email: upspotlimited@gmail.com
                 </a>
               </li>
-              <li className="text-sm">
-                <span className="block text-white mb-1 font-medium">Registered Office:</span>
-                Plot# 87, BNS Center, Sector-07,<br />Uttara, Dhaka - 1230, Bangladesh
+              <li>
+                <a 
+                  href="https://www.fiverr.com/users/shameemahmmed" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-emerald-300 font-bold hover:text-white transition-colors underline flex items-center gap-1"
+                >
+                  Fiverr Profile ↗
+                </a>
               </li>
-              <li className="text-sm">
-                <span className="block text-white mb-1 font-medium">Business Office:</span>
-                2nd Floor, House# 25, Road# 05,<br />Sector# 06, Uttara, Dhaka - 1230, Bangladesh
+              <li className="text-xs pt-1">
+                <span className="block text-white mb-0.5 font-medium">Registered Office:</span>
+                Plot# 87, BNS Center, Sector-07, Uttara, Dhaka - 1230, Bangladesh
               </li>
             </ul>
           </div>
