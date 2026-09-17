@@ -102,19 +102,6 @@ export default function AboutPage() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                    <div className="p-6 bg-neutral-50 rounded-2xl border border-neutral-200 shadow-sm">
-                      <CheckCircle2 className="w-6 h-6 mb-4 text-emerald-500" />
-                      <h4 className="font-bold mb-2 text-neutral-900 text-lg">Strict Accountability</h4>
-                      <p className="text-neutral-600 text-sm leading-relaxed">Complete transparency on ad spend and performance KPIs. You own your data.</p>
-                    </div>
-                    <div className="p-6 bg-neutral-50 rounded-2xl border border-neutral-200 shadow-sm">
-                      <TrendingUp className="w-6 h-6 mb-4 text-teal-500" />
-                      <h4 className="font-bold mb-2 text-neutral-900 text-lg">Data-Driven</h4>
-                      <p className="text-neutral-600 text-sm leading-relaxed">Every decision is backed by statistical significance and rigorous testing protocols.</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </FadeIn>
