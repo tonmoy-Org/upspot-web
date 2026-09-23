@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, BarChart3, LineChart, Target, Zap, CheckCircle2, TrendingUp, ShieldCheck, LayoutDashboard, Server, Cpu, Check, Building2, Sparkles } from 'lucide-react';
+import { ArrowRight, BarChart3, LineChart, Target, Zap, CheckCircle2, TrendingUp, ShieldCheck, LayoutDashboard, Server, Cpu, Check, Building2, Sparkles, Star, MapPin, Quote, BadgeCheck } from 'lucide-react';
 import FadeIn from '@/components/FadeIn';
+import ServiceImageShowcase from '@/components/ServiceImageShowcase';
+import { serviceImageData } from '@/lib/serviceImageData';
 
 export default function Home() {
   return (
@@ -112,14 +114,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-                      alt="Digital Marketing Analytics Dashboard" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="performance-marketing"
+                    primaryColor="emerald"
+                    darkTheme={true}
+                    images={serviceImageData.performanceMarketing}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -161,14 +161,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-teal-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-                      alt="SEO Team Collaborating in Office" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="technical-seo"
+                    primaryColor="teal"
+                    darkTheme={true}
+                    images={serviceImageData.technicalSeo}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -210,14 +208,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-green-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop" 
-                      alt="UI UX Wireframe Testing" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="cro-optimization"
+                    primaryColor="green"
+                    darkTheme={true}
+                    images={serviceImageData.croOptimization}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -259,14 +255,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" 
-                      alt="Google Ads and Analytics Dashboard" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="google-ads"
+                    primaryColor="yellow"
+                    darkTheme={true}
+                    images={serviceImageData.googleAds}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -308,14 +302,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
-                      alt="Coding and Web Development" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="cloud-development"
+                    primaryColor="blue"
+                    darkTheme={true}
+                    images={serviceImageData.cloudDevelopment}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -357,14 +349,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="lg:w-1/2 w-full">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                    <div className="absolute inset-0 bg-purple-500/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
-                      alt="Business Automation and CRM Analytics" 
-                      className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                  <ServiceImageShowcase
+                    serviceId="crm-automation"
+                    primaryColor="purple"
+                    darkTheme={true}
+                    images={serviceImageData.crmAutomation}
+                  />
                 </div>
               </div>
               </FadeIn>
@@ -568,36 +558,286 @@ export default function Home() {
         </section>
 
         {/* Client Proof */}
-        <section className="w-full py-24 bg-neutral-50 border-y border-neutral-200">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-neutral-900">Trusted by Local Industry Leaders</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-10 rounded-2xl border border-neutral-200 relative shadow-sm">
-                <div className="text-7xl text-neutral-200 absolute top-4 left-6 font-serif">"</div>
-                <p className="text-neutral-600 relative z-10 italic mb-8 text-lg leading-relaxed">
-                  UpSpot Limited transformed our e-commerce acquisition model in Bangladesh. Within 6 months, our CPA dropped by 42% while overall volume scaled significantly. Their technical expertise is unmatched in the local market.
+        <section className="w-full py-24 bg-gradient-to-b from-neutral-50 via-emerald-50/20 to-neutral-50 border-y border-neutral-200/80 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-100/30 via-transparent to-transparent pointer-events-none"></div>
+          
+          <div className="container mx-auto px-4 max-w-7xl relative z-10">
+            <FadeIn delay={0.1}>
+              <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div className="inline-flex items-center rounded-full bg-emerald-100/80 border border-emerald-300/60 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-800 shadow-xs">
+                  <BadgeCheck className="w-4 h-4 mr-2 text-emerald-600" /> Proven Success in Bangladesh
+                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900">
+                  Trusted by Bangladesh's Top Industry Leaders
+                </h2>
+                <p className="text-neutral-600 text-lg leading-relaxed">
+                  See how over 150+ Bangladeshi e-commerce brands, corporate enterprises, and tech startups accelerate revenue with UpSpot Limited.
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100"></div>
-                  <div>
-                    <h4 className="font-bold text-neutral-900">Tanvir Rahman</h4>
-                    <p className="text-sm text-neutral-500">Director, Apex Retail BD</p>
-                  </div>
+
+                {/* Trust stats strip */}
+                <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-neutral-600">
+                  <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-neutral-200 shadow-2xs">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <strong>150+</strong> BD Brands Scaled
+                  </span>
+                  <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-neutral-200 shadow-2xs">
+                    <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                    <strong>4.9/5</strong> Client Satisfaction
+                  </span>
+                  <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-neutral-200 shadow-2xs">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal-600" />
+                    <strong>98.4%</strong> Retention Rate
+                  </span>
                 </div>
               </div>
-              <div className="bg-white p-10 rounded-2xl border border-neutral-200 relative shadow-sm">
-                <div className="text-7xl text-neutral-200 absolute top-4 left-6 font-serif">"</div>
-                <p className="text-neutral-600 relative z-10 italic mb-8 text-lg leading-relaxed">
-                  The team at UpSpot doesn't just run ads; they understand business economics and the nuances of the Dhaka consumer base. Their funnel optimization opened up entirely new revenue streams for us.
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-teal-100"></div>
-                  <div>
-                    <h4 className="font-bold text-neutral-900">Sadia Islam</h4>
-                    <p className="text-sm text-neutral-500">Founder, Luxe Attire</p>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Testimonial 1 */}
+              <FadeIn delay={0.1} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 rounded-full">
+                        -42% CPA Drop
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "UpSpot Limited transformed our e-commerce acquisition model in Bangladesh. Within 6 months, our CPA dropped by 42% while overall order volume scaled significantly. Their local Meta ad targeting and technical expertise are unmatched in the Dhaka market."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=250&auto=format&fit=crop" 
+                        alt="Tanvir Rahman" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Tanvir Rahman <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">Director, Apex Retail BD</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-emerald-600" /> Gulshan, Dhaka
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
+
+              {/* Testimonial 2 */}
+              <FadeIn delay={0.2} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-teal-700 bg-teal-50 border border-teal-200/70 px-2.5 py-1 rounded-full">
+                        +210% Revenue
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "The team at UpSpot doesn't just run ads; they understand business economics and the nuances of the local consumer base. Their checkout funnel optimization for bKash & Cash on Delivery opened up entirely new revenue streams for us."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=250&auto=format&fit=crop" 
+                        alt="Sadia Islam" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-teal-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Sadia Islam <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">Founder & CEO, Luxe Attire</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-teal-600" /> Banani, Dhaka
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Testimonial 3 */}
+              <FadeIn delay={0.3} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 rounded-full">
+                        5x B2B Leads
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "Their Google Search campaigns and technical SEO strategies brought us high-value corporate enterprise clients from across Bangladesh. We saw a 5x increase in qualified B2B inquiries within just 90 days."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=250&auto=format&fit=crop" 
+                        alt="Mahmud Hasan" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Mahmud Hasan <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">Head of Growth, TechNova Solutions</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-emerald-600" /> Uttara, Dhaka
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Testimonial 4 */}
+              <FadeIn delay={0.4} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-teal-700 bg-teal-50 border border-teal-200/70 px-2.5 py-1 rounded-full">
+                        4.5x ROAS
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "UpSpot's creative team produced localized video ads in Bengali that resonated deeply with our target audience. Our ROAS scaled from 1.8x to 4.5x, making our Eid campaign sales our highest ever recorded."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=250&auto=format&fit=crop" 
+                        alt="Nusrat Jahan" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-teal-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Nusrat Jahan <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">Co-Founder, CraftyMart BD</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-teal-600" /> Dhanmondi, Dhaka
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Testimonial 5 */}
+              <FadeIn delay={0.5} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 rounded-full">
+                        99.99% Uptime
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "Not only did they scale our digital ads, but their cloud infrastructure team migrated our e-commerce store to high-speed managed servers. Our site handled over 100k daily visitors during peak flash sales without a second of downtime."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=250&auto=format&fit=crop" 
+                        alt="Kazi Farhan Ahmed" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Kazi Farhan Ahmed <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">COO, AgroFresh BD</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-emerald-600" /> Agrabad, Chittagong
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Testimonial 6 */}
+              <FadeIn delay={0.6} direction="up">
+                <div className="h-full bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md shadow-neutral-100 hover:shadow-xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between relative group">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-400 gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        ))}
+                      </div>
+                      <span className="inline-flex items-center text-xs font-bold text-teal-700 bg-teal-50 border border-teal-200/70 px-2.5 py-1 rounded-full">
+                        50,000+ Students
+                      </span>
+                    </div>
+
+                    <p className="text-neutral-700 text-base leading-relaxed italic relative z-10 pt-2">
+                      "UpSpot built our automated lead nurture funnels and Meta CAPI tracking setup. Our cost per student acquisition dropped by 50% while course enrollments hit record high numbers across all major BD divisions."
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-neutral-100 flex items-center justify-between">
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=250&auto=format&fit=crop" 
+                        alt="Tazin Chowdhury" 
+                        className="w-12 h-12 rounded-full object-cover ring-2 ring-teal-500/30 shadow-sm"
+                      />
+                      <div>
+                        <h4 className="font-bold text-neutral-900 text-sm flex items-center gap-1">
+                          Tazin Chowdhury <BadgeCheck className="w-4 h-4 text-emerald-600 inline" />
+                        </h4>
+                        <p className="text-xs text-neutral-500 font-medium">Managing Director, EduSmart BD</p>
+                        <p className="text-[11px] text-neutral-400 flex items-center gap-1 mt-0.5">
+                          <MapPin className="w-3 h-3 text-teal-600" /> Mirpur, Dhaka
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
             </div>
           </div>
         </section>

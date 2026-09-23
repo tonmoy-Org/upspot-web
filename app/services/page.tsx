@@ -1,6 +1,8 @@
 import { Search, PenTool, LayoutDashboard, Target, ArrowRight, Server, Cpu, Check, Building2, Sparkles } from "lucide-react";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import ServiceImageShowcase from "@/components/ServiceImageShowcase";
+import { serviceImageData } from "@/lib/serviceImageData";
 
 export default function ServicesPage() {
   return (
@@ -63,14 +65,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-emerald-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Digital Marketing Analytics Dashboard" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="performance-marketing"
+                  primaryColor="emerald"
+                  darkTheme={false}
+                  images={serviceImageData.performanceMarketing}
+                />
               </div>
             </div>
             </FadeIn>
@@ -112,14 +112,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-teal-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-                    alt="SEO Team Collaborating in Office" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="technical-seo"
+                  primaryColor="teal"
+                  darkTheme={false}
+                  images={serviceImageData.technicalSeo}
+                />
               </div>
             </div>
             </FadeIn>
@@ -161,14 +159,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-green-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop" 
-                    alt="UI UX Wireframe Testing" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="cro-optimization"
+                  primaryColor="green"
+                  darkTheme={false}
+                  images={serviceImageData.croOptimization}
+                />
               </div>
             </div>
             </FadeIn>
@@ -210,14 +206,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-yellow-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" 
-                    alt="Google Ads and Analytics Dashboard" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="google-ads"
+                  primaryColor="yellow"
+                  darkTheme={false}
+                  images={serviceImageData.googleAds}
+                />
               </div>
             </div>
             </FadeIn>
@@ -259,14 +253,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Coding and Web Development" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="cloud-development"
+                  primaryColor="blue"
+                  darkTheme={false}
+                  images={serviceImageData.cloudDevelopment}
+                />
               </div>
             </div>
             </FadeIn>
@@ -308,14 +300,12 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-xl group">
-                  <div className="absolute inset-0 bg-purple-600/5 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
-                    alt="Business Automation and CRM Analytics" 
-                    className="w-full h-[400px] object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ServiceImageShowcase
+                  serviceId="crm-automation"
+                  primaryColor="purple"
+                  darkTheme={false}
+                  images={serviceImageData.crmAutomation}
+                />
               </div>
             </div>
             </FadeIn>
